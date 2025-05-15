@@ -1,0 +1,36 @@
+/** generel **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+main {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+/***********/
+
+@media (min-width: 600px) {
+  main {
+    padding: 4rem;
+  }
+}
