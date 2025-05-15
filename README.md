@@ -1,3 +1,56 @@
+# Teknisk dokumentation for Tema 10 gruppe eksamensprojekt (Et website til 1257°)
+
+Vi har skrevet denne readme for at sikre, en så strømlignet samarbejdsproces som muligt.
+
+## Projektstruktur:
+
+- Organisering af billeder, fonte og andre ressourcer:
+
+  Billeder er placeret i en mappe kaldet 'img'
+  Fonte (adobe) linkes til i <head> i mainLayout, samt defineres i css variabler (style.css)
+  Andre ressourcer ligger i en mappe kaldet 'assets' (logo, video...)
+
+- Alle pages er placeret i en pages mappe i scr.
+
+- Vi arbejder med komponenter, som alle ligger i en components mappe i scr.
+
+## Navngivning:
+
+- Filnavne skrives med små bogstaver og uden mellemrum fx: index.astro, about.astro, style.css...
+
+## Link til scripts:
+
+- Vi refererer til scripts i vores fences i mainLayout.astro.
+
+## Git branches:
+
+- Vi navngiver branches således, så det er klart for alle hvad de forskellige commits gør: add/remove-feature-navn -> add-menu-luna
+
+## Arbejdsflow:
+
+- Vi sørger for at have opdelt vores prototype i komponenter, så det er let at arbejde flere på samme tid - Uden at man sidder i den samme fil.
+
+## Kode:
+
+- Hvordan skriver i funktioner i JavaScript?(fx med function keyword eller som arrow functions)
+
+- For at sikre at koden er let for alle at finde rundt i, opdeler vi stylesheets med kommentarer så man kan se hvad den givne styling gør fx: /** styling af menu **/
+
+# Funktionalitet
+
+- Vi har arbejdet med dynamisk indhold fra superbase til vores eventkalender.
+- Vi har en sign-up til venteliste knap, der skal føre videre til et googleforms opskrivningsscheet.
+
+# API endpoints
+
+Link til superbase?
+
+# Dokumentation af Funktion
+
+Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
+
+- Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
+
 # Astro Starter Kit: Minimal
 
 ```sh
