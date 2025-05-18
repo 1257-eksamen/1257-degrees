@@ -1,0 +1,159 @@
+---
+
+---
+
+<nav>
+  <ul class="menu">
+    <li><a href="/about">ABOUT</a></li>
+    <li><a href="/eventcalender">EVENTS</a></li>
+    <li><a href="/gallery">GALLERY</a></li>
+    <li><a href="/signup">SIGN UP</a></li>
+  </ul>
+  <div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</nav>
+
+<style>
+  /** layout **/
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    /* width: 400px; */
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    transition: color 0.3s;
+    text-align: end;
+  }
+
+  .burger .line {
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  /** style **/
+  .menu a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: var(--h3d);
+    transition: 0.3s;
+  }
+
+  .menu a:hover {
+    color: var(--accent);
+  }
+
+  .menu a.aktiv {
+    text-decoration-color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .burger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
+  }
+
+  @media screen and (max-width: 700px) {
+    /** layout **/
+    .menu {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      z-index: 70;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    /** style **/
+    nav.active .menu {
+      background-color: var(--primary);
+    }
+
+    nav.active .menu a {
+      font-size: var(--h3m);
+    }
+  }
+</style>
+
+<script>
+  //menu js
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+  //toggle add/remove classes nemt
+
+  menu.addEventListener("click", menuClick);
+  function menuClick() {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+</script>
