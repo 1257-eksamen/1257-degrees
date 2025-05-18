@@ -15,8 +15,8 @@
   --h2m: 2rem;
   --h2d: 3.5rem;
 
-  --h3m: 1.3rem;
-  --h3d: 1.4rem;
+  --h3m: 1.1rem;
+  --h3d: 1.2rem;
 
   --pstorM: 1.1rem;
   --pstorD: 1.3rem;
@@ -92,6 +92,10 @@ p {
 
   .pstor {
     font-size: var(--pstorD);
+  }
+
+  a:hover {
+    color: var(--accent);
   }
   /************/
 }
