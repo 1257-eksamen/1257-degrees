@@ -1,0 +1,85 @@
+---
+
+---
+
+<footer>
+  <a href="/">
+    <svg viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="52.5" cy="52.5" r="44" stroke="#342b11" stroke-width="17"></circle>
+    </svg>
+  </a>
+
+  <ul class="nav">
+    <li><a href="/about">ABOUT</a></li>
+    <li><a href="/eventcalender">EVENTS</a></li>
+    <li><a href="/gallery">GALLERY</a></li>
+    <li><a href="/signup">SIGN UP</a></li>
+  </ul>
+
+  <ul class="social-links">
+    <li><a href="mailto:1257claycollective@gmail.com">MAIL</a></li>
+    <li><a href="https://www.instagram.com/1257_degrees/" target="_blank">INSTAGRAM</a></li>
+    <li><a href="https://www.facebook.com/p/1257-Keramik-V%C3%A6rkstedet-61560098310888/?locale=da_DK" target="_blank">FACEBOOK</a></li>
+  </ul>
+
+  <div class="adress">
+    <p>OPEN FROM 10 – 14</p>
+    <p>MONDAY – WEDNESDAY – FRIDAY</p>
+    <p>ØRESUNDSVEJ 57, 2300, COPENHAGEN</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 1rem;
+  }
+  svg {
+    width: 105px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  a,
+  p {
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: var(--h3m);
+  }
+
+  .nav,
+  .social-links,
+  .adress {
+    padding-bottom: 2rem;
+    line-height: 1.7;
+    list-style: none;
+  }
+
+  @media (min-width: 850px) {
+    a,
+    p {
+      font-size: var(--h3d);
+    }
+    footer {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      padding-left: 5rem;
+      padding-bottom: 3rem;
+    }
+
+    svg {
+      width: 120px;
+      margin: 0;
+      margin-bottom: 0;
+    }
+
+    .nav,
+    .social-links,
+    .adress {
+      padding-bottom: 0;
+    }
+  }
+</style>
