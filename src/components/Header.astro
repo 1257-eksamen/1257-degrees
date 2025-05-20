@@ -1,11 +1,13 @@
 ---
 import Nav from "../components/Nav.astro";
 import Logo from "../components/Logo.astro";
+
+const { title } = Astro.props;
 ---
 
 <header>
   <Logo color="secondary_color" />
-  <Nav />
+  <Nav title={title} />
 </header>
 
 <style>

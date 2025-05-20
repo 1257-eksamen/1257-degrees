@@ -1,13 +1,57 @@
 ---
-
+const { title } = Astro.props;
+console.log(title);
 ---
 
 <nav>
   <ul class="menu">
-    <li><a href="/about">ABOUT</a></li>
-    <li><a href="/eventcalender">EVENTS</a></li>
-    <li><a href="/gallery">GALLERY</a></li>
-    <li><a href="/signup">SIGN UP</a></li>
+    {
+      title == "About" ? (
+        <li class="active ">
+          <a href="/about">ABOUT</a>
+        </li>
+      ) : (
+        <li>
+          <a href="/about">ABOUT</a>
+        </li>
+      )
+    }
+
+    {
+      title == "Event Calender" ? (
+        <li class="active ">
+          <a href="/eventcalender">EVENTS</a>
+        </li>
+      ) : (
+        <li>
+          <a href="/eventcalender">EVENTS</a>
+        </li>
+      )
+    }
+
+    {
+      title == "Gallery" ? (
+        <li class="active ">
+          <a href="/gallery">GALLERY</a>
+        </li>
+      ) : (
+        <li>
+          <a href="/gallery">GALLERY</a>
+        </li>
+      )
+    }
+
+    {
+      title == "Sign Up" ? (
+        <li class="active ">
+          <a href="/signup">SIGN UP</a>
+        </li>
+      ) : (
+        <li>
+          <a href="/signup">SIGN UP</a>
+        </li>
+      )
+    }
   </ul>
   <div class="burger">
     <div class="line"></div>
@@ -34,6 +78,12 @@
 
   .menu li {
     margin-right: 55px;
+  }
+
+  .active {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
   }
 
   .menu li:last-child {
