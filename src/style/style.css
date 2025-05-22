@@ -5,15 +5,18 @@
   /**farver**/
   --primary: #fffef5;
   --secondary: #342b11;
+  --secondary80: rgba(52, 43, 17, 0.8);
   --accent1: #bec9a0;
+  --accent145: rgba(190, 201, 160, 0.45);
   --accent2: #b55c3a;
+  --accent280: rgba(181, 92, 58, 0.8);
 
   /**font sizes**/
-  --h1m: 2.4rem;
+  --h1m: 2.5rem;
   --h1d: 4.5rem;
 
-  --h2m: 2rem;
-  --h2d: 3.5rem;
+  --h2m: 1.7rem;
+  --h2d: 2.5rem;
 
   --h3m: 1.1rem;
   --h3d: 1.2rem;
