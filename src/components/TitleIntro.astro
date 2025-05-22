@@ -1,0 +1,19 @@
+---
+const { h1, intro } = Astro.props;
+---
+
+<h1>{h1}</h1>
+<p>{intro}</p>
+
+<style>
+  p {
+    max-width: 400px;
+    padding-bottom: 3rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    p {
+      max-width: 500px;
+    }
+  }
+</style>
