@@ -5,8 +5,8 @@
   /**farver**/
   --primary: #fffef5;
   --secondary: #342b11;
-  --tertiary: rgba(230, 224, 206, 0.45); /** det sidste kommatal er en alpha, og bestemmer at farven skal være 45% transparent **/
-  --accent: #b55c3a;
+  --accent1: #bec9a0;
+  --accent2: #b55c3a;
 
   /**font sizes**/
   --h1m: 2.4rem;
@@ -111,7 +111,7 @@ a {
   }
 
   a:hover {
-    color: var(--accent);
+    color: var(--accent2);
   }
   /************/
 }
