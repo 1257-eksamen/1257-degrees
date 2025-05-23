@@ -1,0 +1,185 @@
+---
+const { data } = Astro.props;
+---
+
+<article>
+  <button data-accordion-button class="accordion">
+    <div class="flex">
+      <div class="tidspunkt">
+        <p class="dato">{data.date}</p>
+        <div class="month"><p>{data.month}</p></div>
+      </div>
+      <div class="titel">
+        <h2>{data.title}</h2>
+        <h3>{data.artist}</h3>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+  <div class="panel">
+    <div class="descktop_grid">
+      <p class="aabningstid">{data.time}</p>
+      <div class="panel_grid">
+        <div>
+          <img src={data.image} alt={data.title} />
+        </div>
+        <div><p>{data.details}</p><a class="readmore" href="#">read more...</a></div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .accordion {
+      background-color: transparent;
+      cursor: pointer;
+      padding: 18px 0px 18px 0px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      border-bottom: 2px solid var(--secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+    .active,
+    .accordion:hover {
+      background-color: #f4f9e8;
+    }
+
+    .panel {
+      /*top, left, bottom*/
+      padding: 14px 0px 20px;
+      display: none;
+      background-color: var(--primary);
+      overflow: hidden;
+      pointer-events: auto;
+      border-bottom: 2px solid var(--secondary);
+    }
+
+    svg {
+      pointer-events: none;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+
+    .tidspunkt {
+      display: flex;
+      gap: 0.2rem;
+    }
+
+    .tidspunkt p {
+      font-family: "futura-pt", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .dato {
+      font-size: 3.5rem;
+    }
+
+    .month {
+      font-size: 1.1rem;
+    }
+
+    .flex {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .panel_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .aabningstid {
+      font-family: "futura-pt", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .readmore {
+      cursor: pointer;
+      text-decoration: underline;
+      color: var(--secondary);
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+      font-size: var(--pm);
+      transition: 0.3s;
+    }
+
+    @media (min-width: 600px) {
+      .readmore {
+        font-size: var(--pd);
+        transition: 0.3s;
+      }
+
+      .readmore:hover {
+        color: var(--accent2);
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .descktop_grid {
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+      }
+
+      .panel_grid {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .panel img {
+        max-height: 300px;
+        width: auto;
+      }
+    }
+  </style>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-accordion-button]");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", onClick);
+    });
+
+    function onClick(event) {
+      const button = event.currentTarget;
+      const panel = button.parentElement.querySelector(".panel");
+      const icon = button.querySelector("svg");
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+
+      // Toggle rotation og aktiv klasse
+      icon.classList.toggle("rotate");
+      button.classList.toggle("active");
+    }
+  </script>
+</article>

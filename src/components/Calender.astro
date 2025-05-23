@@ -1,0 +1,33 @@
+---
+import Event from "../components/Event.astro";
+const res = await fetch("https://nlpgwdmoeqpqkoifrvrz.supabase.co/rest/v1/eventkalender", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5scGd3ZG1vZXFwcWtvaWZydnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3NDc1ODIsImV4cCI6MjA2MzMyMzU4Mn0.rDmD82X5l5_i6v2xIQxYAF8jQ2j7-cmthouUG3s7d5k",
+  },
+});
+
+const data = await res.json();
+
+console.log(data);
+---
+
+<div class="grid">
+  <section class="events">
+    {
+      data.map((event) => {
+        return <Event data={event} />;
+      })
+    }
+  </section>
+</div>
+
+<style>
+  @media (min-width: 780px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      padding-bottom: 5rem;
+    }
+  }
+</style>
