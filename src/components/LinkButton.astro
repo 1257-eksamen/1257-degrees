@@ -1,13 +1,13 @@
 ---
-
+const { link, target } = Astro.props;
 ---
 
-<button>
+<a href={link} target={target}>
   <slot />
-</button>
+</a>
 
 <style>
-  button {
+  a {
     background-color: var(--primary);
     border: 3px solid var(--accent2);
     padding: 10px 20px;
@@ -20,12 +20,12 @@
   }
 
   @media (min-width: 600px) {
-    button {
+    a {
       font-size: 1.2rem;
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    a:hover {
       background-color: var(--accent2);
       color: var(--primary);
     }
