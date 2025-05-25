@@ -1,0 +1,107 @@
+---
+const { img4, img5, name4, name5, date4, date5 } = Astro.props;
+---
+
+<article>
+  <div class="box_4">
+    <img src={img4} alt={img4} />
+    <p class="p_4">{name4}</p>
+    <p class="p_4">{date4}</p>
+  </div>
+
+  <div class="box_5">
+    <img src={img5} alt={img5} />
+    <p class="p_5">{name5}</p>
+    <p class="p_5">{date5}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .p_4 {
+    size: 5px;
+    padding-left: 0.3rem;
+  }
+
+  .p_5 {
+    padding-left: 0;
+  }
+
+  .box_4 {
+    grid-row: 1;
+    grid-column: 1/8;
+  }
+
+  .box_5 {
+    grid-row: 2/3;
+    grid-column: 4/16;
+    margin-top: -4rem;
+  }
+
+  @media screen and (min-width: 780px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: 1fr;
+      margin-top: 5rem;
+      margin-left: 0;
+      margin-right: -3rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    .box_4 {
+      grid-row: 1;
+      grid-column: 5/9;
+      margin-top: 8em;
+    }
+
+    .box_5 {
+      grid-row: 1;
+      grid-column: 14/21;
+      margin-top: 0rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: 1fr;
+      margin-top: 5rem;
+      margin-left: 0;
+      margin-right: -3rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: 1fr;
+      margin-top: 5rem;
+      margin-left: 0;
+      margin-right: -3rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: 1fr;
+      margin-top: 5rem;
+      margin-left: 0;
+      margin-right: -10.5rem;
+    }
+  }
+</style>

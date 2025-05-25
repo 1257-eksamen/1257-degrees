@@ -1,7 +1,70 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import TitleIntro from "../components/TitleIntro.astro";
+import GalleryLayout1 from "../components/GalleryLayout1.astro";
+import GalleryLayout2 from "../components/GalleryLayout2.astro";
+import GalleryLayout3 from "../components/GalleryLayout3.astro";
 ---
 
 <MainLayout title="Gallery">
-  <h1>GALLERY</h1>
+  <TitleIntro h1="GALLERY" intro="Our gallery displays work made by our members, where they explore different techniques and styles to create their art for the world to see. *displayed works are available for purchase in store." />
+
+  <img src="/public/img/galleri/long_shape_gallery.webp" alt="long-shape" />
+
+  <GalleryLayout1 img1="/img/galleri/galleri_1.webp" name1="Liv Tyler" date1="6/02/25" img2="/img/galleri/galleri_2.webp" name2="Liv Tyler" date2="8/02/25" img3="/img/galleri/galleri_3.webp" name3="Linea Berger" date3="19/03/25" />
+  <GalleryLayout2 img4="/img/galleri/galleri_4.webp" name4="Linea Berger" date4="19/03/25" img5="/img/galleri/galleri_5.webp" name5="Melissa Jensen" date5="20/04/25" />
+  <GalleryLayout3 img6="/img/galleri/galleri_6.webp" name6="Melissa Jensen" date6="19/03/25" img7="/img/galleri/galleri_7.webp" name7="Linea Berger" date7="12/01/25" img8="/img/galleri/galleri_8.webp" name8="Linea Berger" date8="12/01/25" />
+
+  <GalleryLayout1 img1="/img/galleri/galleri_9.webp" name1="Trine Skav" date1="3/04/25" img2="/img/galleri/galleri_10.webp" name2="Melissa Jensen" date2="9/02/25" img3="/img/galleri/galleri_11.webp" name3="Liv Tyler" date3="06/02/25" />
+  <GalleryLayout2 img4="/img/galleri/galleri_12.webp" name4="Trine Skav " date4="3/06/24" img5="/img/galleri/galleri_13.webp" name5="Trine Skav " date5="3/06/24" />
+  <GalleryLayout3 img6="/img/galleri/galleri_14.webp" name6="Linea Berger" date6="20/03/24" img7="/img/galleri/galleri_15.webp" name7="Linea Berger" date7="20/03/24" img8="/img/galleri/galleri_16.webp" name8="Trine Skav" date8="8/09/24" />
 </MainLayout>
+
+<style>
+  p {
+    max-width: 400px;
+    padding-bottom: 3rem;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 250%;
+    height: 900%;
+  }
+
+  @media (min-width: 600px) {
+    p {
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      height: 400%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    p {
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      height: 700%;
+    }
+  }
+
+  @media (min-width: 1350px) {
+    p {
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      height: 800%;
+    }
+  }
+</style>
