@@ -4,6 +4,7 @@ import LinkButton from "../components/LinkButton.astro";
 ---
 
 <MainLayout title="Homepage">
+  <div class="hero"> 
   <div class="hero-logo">
     <h1>1<span class="lower">2</span>5<span class="lower">7</span>°</h1>
   </div>
@@ -17,10 +18,11 @@ import LinkButton from "../components/LinkButton.astro";
 
   <!-- video -->
   <div class="hero-content">
-    <video autoplay muted loop playsinline style="width: 100%; height: auto; object-fit: cover;">
+    <video autoplay muted loop playsinline>
       <source src="/video/hero_video.webm" type="video/webm" />
     </video>
   </div>
+</div>
 
   <!-- Galleri Sektion -->
   <section id="next-section" class="gallery">
@@ -33,9 +35,12 @@ import LinkButton from "../components/LinkButton.astro";
   <div class="galleri_text">
     <h2 class="overskrift">CLAY COLLECTIVE</h2>
     <p>1257° is more than just a ceramic studio, it's a community where meaningful connections matter just as much as the handmade pieces themselves.</p>
+    <button class="scroll-button" aria-label="Scroll gallery">
       <svg class="pilen2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="9 6 15 12 9 18"></polyline>
       </svg>
+    </button>
+    
   </div>
   
     <div class="gallery-container">
@@ -83,13 +88,22 @@ import LinkButton from "../components/LinkButton.astro";
 </MainLayout>
 
 <style>
-
+/* styling af videoen */
+.hero{
+  position: relative;
+  height: 65svh;
+  overflow: hidden;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
 .hero-logo h1{
-  color: var(--primary);
   position: absolute;
-  top: 19%;
-  left: 26%;
-  font-size: 5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 7rem;
+  color: var(--primary);
 }
 
 .lower {
@@ -98,37 +112,40 @@ import LinkButton from "../components/LinkButton.astro";
 }
   
   .hero-content{
-    margin-top: -2rem;
-    margin-left: -2rem;
-    margin-right: -2rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .pilen svg {
     position: absolute;
-    top: 34%;
-    left: 45%;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+  top: 80%;
+  left: 46%;
     }
 
    
 
     /* GRAFISKE FORMER */
-    .grafiske_form img{
-    position: absolute;
-    left: 0%;
-    z-index: -1;
-    width: 100%;
-    height: auto;
-    }
+    .grafiske_form img,
+.grafiske_form2 img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
 
-    .grafiske_form2 img{
-    position: absolute;
-    right: 0%;
-    z-index: -1;
-    width: 100%;
-    height: auto;
-    }
+.grafiske_form img { left: 0%; }
+.grafiske_form2 img { right: 0%; }
+
 
 /* STYLING FOR GALLERY SECTION */
 
@@ -160,6 +177,14 @@ import LinkButton from "../components/LinkButton.astro";
       margin-left: 17rem;
     } 
 
+    .scroll-button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex; /* så SVG'en ikke forsvinder */
+  align-items: center;
+  justify-content: center;
+}
+
 .gallery-item {
   flex: 0 0 auto; /*grow-shrink-basis*/
 width: 80%;   /* måske skal man have width: 100%*/
@@ -173,43 +198,14 @@ width: 80%;   /* måske skal man have width: 100%*/
   object-fit: cover;
 }
 
-/* For the first image (smaller and positioned at the top) */
-.gallery-item:first-child img {
-  width: 40%;
-}
-
-/* For the second image (default size) */
-.gallery-item:nth-child(2) img {
-  width: 70%; /* Default size */
-  margin-top: 5rem;
-}
-
-/* For the third image (smaller and positioned at the bottom) */
-.gallery-item:nth-child(3) img {
-  width: 50%; 
-  margin-top: 20rem;
-}
-
-/* For the fourth image (default size) */
-.gallery-item:nth-child(4) img {
-  width: 90%;  
-}
-
-/* For the fifth and sixth images (slightly smaller) */
-.gallery-item:nth-child(5) img {
-  width: 50%; 
-  margin-top: 2rem;
-}
-
-.gallery-item:nth-child(6) img {
-  width: 60%; 
-  margin-top: 6rem;
-}
-
-/* For the last image (larger and centered on the y-axis) */
-.gallery-item:last-child img {
-  width: 70%; 
-}
+/* individuelle billede-justeringer (kan justeres efter behov) */
+.gallery-item:first-child img { width: 60%; }
+.gallery-item:nth-child(2) img { width: 70%; margin-top: 5rem; }
+.gallery-item:nth-child(3) img { width: 50%; margin-top: 20rem; }
+.gallery-item:nth-child(4) img { width: 90%; }
+.gallery-item:nth-child(5) img { width: 50%; margin-top: 2rem; }
+.gallery-item:nth-child(6) img { width: 60%; margin-top: 6rem; }
+.gallery-item:last-child img { width: 70%; }
 
 
 /* STYLING AF WAITLIST SECTION */
@@ -247,39 +243,28 @@ width: 80%;   /* måske skal man have width: 100%*/
 }
 
 /* mellem *mediaquery til hero_video */
-@media screen and (min-width: 700px) {
-  .hero-logo h1{
-  top: 26%;
-  left: 19%;
+@media screen and (min-width: 600px) {
+  .hero{
+  margin-left: -3rem;
+  margin-right: -3rem;
+  height: 70svh;
+}
+   .hero-logo h1{
   font-size: 10rem;
   }
-
-  .pilen svg {
-    top: 78%;
-    left: 46%;
-    width: 75px;
-    height: 75px;
-    }
 }
 
   @media screen and (min-width: 800px) {
-  .hero-content{
-  margin-top: -3rem;
-  margin-left: -12rem;
-  margin-right: -12rem;
-  height: 700px; /* bestemmer højden på videoen */
-  overflow: hidden; /* skjuler det, der er uden for containeren */
+    .hero{ 
+    height: 75svh;
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+   .hero-logo h1{
+  font-size: 15rem;
   }
 
-  .hero-content video{
-  object-position: 20% 20%; /* crop bunden og toppen */
-  }
 
-  .hero-logo h1{
-  top: 30%;
-  left: 21%;
-  font-size: 20rem;
-  }
 
   .pilen svg {
     top: 78%;
@@ -359,3 +344,19 @@ width: 80%;   /* måske skal man have width: 100%*/
 }
 
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollButton = document.querySelector(".scroll-button");
+    const gallery = document.querySelector(".gallery-container");
+
+    if (scrollButton && gallery) {
+      scrollButton.addEventListener("click", () => {
+        gallery.scrollBy({
+          left: 300, // antal pixels at scrolle til højre
+          behavior: "smooth"
+        });
+      });
+    }
+  });
+</script>
