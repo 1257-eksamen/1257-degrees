@@ -25,7 +25,7 @@ const { data } = Astro.props;
         <div>
           <img src={data.image} alt={data.title} />
         </div>
-        <div><p>{data.details}</p><a class="readmore" href={`./events/${data.slug}`}>read more...</a></div>
+        <div><p>{data.details}</p><a class="readmore" href={`../events/${data.slug}`}>read more...</a></div>
       </div>
     </div>
   </div>
