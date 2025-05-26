@@ -2,100 +2,91 @@
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<MainLayout title="About">
+<MainLayout title="About" metabeskrivelse="In the 'About Us' section, you can learn more about who 1257° is. Meet Elly and Morten, the creators behind the studio, and hear their story.">
   <h1>ABOUT</h1>
-    <div class="about-content">
-      <div class="about-text">
-        <p>
-          Founded in May 2024 by Elly and Morten, both graduates of the Design School in Bornholm, 1257° grew out of a post-COVID desire to create something meaningful and community focused. It is a stress free, open studio where members receive a key and can come anytime.
-        </p>
-      </div>
-      <div class="about-text">
-        <p>
-          The name “1257°” was inspired by the degree of which they burn their clay and at its heart, it's about creating space to play, explore, and make ceramics available to everyone — whether you're experienced or just starting out.
-        </p>
-        <div class="connect">
-          <h1>CONNECT</h1>
-          <nav class="social-links">
-            <a href="https://www.instagram.com/1257_degrees/" target="_blank">INSTAGRAM</a>
-            <a href="https://www.facebook.com/p/1257-Keramik-Værkstedet-61560098310888/" target="_blank">FACEBOOK</a>
-            <a href="mailto:1257claycollective@gmail.com">MAIL</a>
-          </nav>
-        </div>
+  <div class="about-content">
+    <div class="about-text">
+      <p>Founded in May 2024 by Elly and Morten, both graduates of the Design School in Bornholm, 1257° grew out of a post-COVID desire to create something meaningful and community focused. It is a stress free, open studio where members receive a key and can come anytime.</p>
+    </div>
+    <div class="about-text">
+      <p>The name “1257°” was inspired by the degree of which they burn their clay and at its heart, it's about creating space to play, explore, and make ceramics available to everyone — whether you're experienced or just starting out.</p>
+      <div class="connect">
+        <h1>CONNECT</h1>
+        <nav class="social-links">
+          <a href="https://www.instagram.com/1257_degrees/" target="_blank">INSTAGRAM</a>
+          <a href="https://www.facebook.com/p/1257-Keramik-Værkstedet-61560098310888/" target="_blank">FACEBOOK</a>
+          <a href="mailto:1257claycollective@gmail.com">MAIL</a>
+        </nav>
       </div>
     </div>
-    <div class="studio-image">
-      <img src="/img/about/studio.webp" alt="studio" />
-    </div>
+  </div>
+  <div class="studio-image">
+    <img src="/img/about/studio.webp" alt="studio" />
+  </div>
 </MainLayout>
 
 <style>
-.studio-image{
-  margin-left: -2rem;
-  margin-right: -2rem;
-}
-
-.studio-image img{
-width: 100%;
-height: auto;
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  .studio-image {
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 
-.connect {
-  margin-top: 3rem;
-}
+  .studio-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .connect {
+    margin-top: 3rem;
+  }
 
   .social-links {
-  display: flex;
-  gap: 1rem;
-  margin-left: 6.9rem;
-  margin-top: 1rem;
-   }
-
+    display: flex;
+    gap: 1rem;
+    margin-left: 6.9rem;
+    margin-top: 1rem;
+  }
 
   .connect h1 {
     text-align: right;
   }
 
+  @media screen and (min-width: 600px) {
+    h1 {
+      margin-left: 9rem;
+    }
 
-@media screen and (min-width: 600px) {
-  h1{
-  margin-left:9rem;
-}
+    .about-content {
+      gap: 4rem;
+      margin-left: 9rem;
+    }
 
-.about-content {
-  gap: 4rem;
-  margin-left: 9rem ;
-}
+    .about-text {
+      flex: 1 1 400px; /* Hver tekstblok må gerne vokse og krympe, men den starter med en bredde på 400px */
+    }
 
-.about-text {
- flex: 1 1 400px; /* Hver tekstblok må gerne vokse og krympe, men den starter med en bredde på 400px */
-}
+    .connect {
+      margin-top: 3rem;
+    }
 
-.connect {
-  margin-top: 3rem;
-}
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      margin-left: 9.6rem;
+    }
 
-.social-links {
-  display: flex;
-  gap: 2rem;
-  margin-left: 9.6rem; 
-}
-
-/* max-width er på 1200px så man kan faktisk ikke få billede ud til kanterne men på mindre skærme ville det så løse problemet at have minus på margin */
-.studio-image {
-  margin-left: -3rem;
-  margin-right: -3rem;
-} 
-}
-
+    /* max-width er på 1200px så man kan faktisk ikke få billede ud til kanterne men på mindre skærme ville det så løse problemet at have minus på margin */
+    .studio-image {
+      margin-left: -3rem;
+      margin-right: -3rem;
+    }
+  }
 </style>
-
-
