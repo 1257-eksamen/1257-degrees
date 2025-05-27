@@ -21,7 +21,7 @@ const { myData } = Astro.props;
 console.log(myData);
 ---
 
-<MainLayout title={myData.title}>
+<MainLayout title={myData.title} metabeskrivelse="On the single event page, you’ll find more details about the collection and the artist.">
   <a href="/eventcalender">
     <svg class="tilbage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="9 6 15 12 9 18"></polyline>
@@ -47,6 +47,7 @@ console.log(myData);
   }
 
   .plakat {
+    max-width: 100%;
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -81,7 +82,8 @@ console.log(myData);
     }
 
     div {
-      padding-left: 5rem;
+      max-width: 100%;
+      padding-left: 2rem;
     }
   }
 
@@ -90,5 +92,10 @@ console.log(myData);
       width: 60%;
       height: auto;
     }
+
+    div {
+      padding-left: 5rem;
+    }
+
   }
 </style>
