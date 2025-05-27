@@ -27,44 +27,26 @@ import GalleryLayout3 from "../components/GalleryLayout3.astro";
     padding-bottom: 3rem;
   }
 
-  .shape_top {
+  img {
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: -1;
     width: 100%;
-    height: 2000px;
+    height: auto;
+  }
+
+  .shape_top {
+    top: 0;
+    left: 0;
   }
 
   .shape_bottom {
-    position: absolute;
     top: 380%;
     right: 0;
-    z-index: -1;
-    width: 500px;
-    height: 2000px;
-  
   }
-
-
 
   @media (min-width: 600px) {
     p {
       max-width: 600px;
-    }
-
-    .shape_top{
-      top: 80px;
-    }
-    
-    .shape_bottom{
-      top: 250%;
-      width: 1500px;
-    }
-
-    img {
-      width: 1440px;
-      height: 4300px;
     }
   }
 
@@ -74,12 +56,8 @@ import GalleryLayout3 from "../components/GalleryLayout3.astro";
     }
 
     img {
-      width: 1440px;
-      height: 4500px;
-    }
-
-    .shape_bottom{
-      top: 320%;
+      width: 60%;
+      height: auto;
     }
   }
 
@@ -87,16 +65,5 @@ import GalleryLayout3 from "../components/GalleryLayout3.astro";
     p {
       max-width: 600px;
     }
-
-    img {
-      width: 1440px;
-      height: 5000px;
-    }
-
-    .shape_bottom{
-      top: 350%;
-      width: 1500px;
-    }
-
   }
 </style>
