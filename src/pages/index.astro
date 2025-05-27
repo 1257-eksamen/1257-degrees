@@ -4,127 +4,120 @@ import LinkButton from "../components/LinkButton.astro";
 ---
 
 <MainLayout title="Homepage" metabeskrivelse="Explore the 1257° ceramics universe, where there's room for everyone and a focus on creating a cozy community in Amager.">
-  <div class="hero"> 
-  <div class="hero-logo">
-    <h1>1<span class="lower">2</span>5<span class="lower">7</span>°</h1>
-  </div>
+  <div class="hero">
+    <div class="hero-logo">
+      <h1>1<span class="lower">2</span>5<span class="lower">7</span>°</h1>
+    </div>
 
-  <!-- pilen -->
-  <a class="pilen" href="#next-section">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </a>
+    <!-- pilen -->
+    <a class="pilen" href="#next-section">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
 
-  <!-- video -->
-  <div class="hero-content">
-    <video autoplay muted loop playsinline>
-      <source src="/video/hero_video.webm" type="video/webm" />
-    </video>
+    <!-- video -->
+    <div class="hero-content">
+      <video autoplay muted loop playsinline>
+        <source src="/video/hero_video.webm" type="video/webm" />
+      </video>
+    </div>
   </div>
-</div>
 
   <!-- Galleri Sektion -->
   <section id="next-section" class="gallery">
-
     <!-- Formen  -->
-<div class="grafiske_form">
-  <img src="/img/landingpage/grafiskform_index.webp" alt="grøn organisk form" />
-  </div> 
-  
-  <div class="galleri_text">
-    <h2 class="overskrift">CLAY COLLECTIVE</h2>
-    <p>1257° is more than just a ceramic studio, it's a community where meaningful connections matter just as much as the handmade pieces themselves.</p>
-    <button class="scroll-button" aria-label="Scroll gallery">
-      <svg class="pilen2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="9 6 15 12 9 18"></polyline>
-      </svg>
-    </button>
-    
-  </div>
-  
+    <div class="grafiske_form">
+      <img src="/img/landingpage/grafiskform_index.webp" alt="grøn organisk form" />
+    </div>
+
+    <div class="galleri_text">
+      <h2 class="overskrift">CLAY COLLECTIVE</h2>
+      <p>1257° is more than just a ceramic studio, it's a community where meaningful connections matter just as much as the handmade pieces themselves.</p>
+      <button class="scroll-button" aria-label="Scroll gallery">
+        <svg class="pilen2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 6 15 12 9 18"></polyline>
+        </svg>
+      </button>
+    </div>
+
     <div class="gallery-container">
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_1.webp" alt="billede1">
+        <img src="/img/landingpage/landingpage_1.webp" alt="billede1" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_2.webp" alt="billede2">
+        <img src="/img/landingpage/landingpage_2.webp" alt="billede2" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_3.webp" alt="billede3">
+        <img src="/img/landingpage/landingpage_3.webp" alt="billede3" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_4.webp" alt="billede4">
+        <img src="/img/landingpage/landingpage_4.webp" alt="billede4" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_5.webp" alt="billede5">
+        <img src="/img/landingpage/landingpage_5.webp" alt="billede5" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_6.webp" alt="billede6">
+        <img src="/img/landingpage/landingpage_6.webp" alt="billede6" />
       </div>
       <div class="gallery-item">
-        <img src="/img/landingpage/landingpage_7.webp" alt="billede7">
+        <img src="/img/landingpage/landingpage_7.webp" alt="billede7" />
       </div>
     </div>
   </section>
 
   <section class="wait_list">
-
-      <!-- Formen2  -->
-       <div class="grafiske_form2"> 
-        <img src="/img/landingpage/grafisk_form2.webp" alt="grøn organisk form2" />
+    <!-- Formen2  -->
+    <div class="grafiske_form2">
+      <img src="/img/landingpage/grafisk_form2.webp" alt="grøn organisk form2" />
+    </div>
+    <div class="waitlist">
+      <div class="waitlist-heading">
+        <h2>WANT TO JOIN OUR <span class="highlighted">WAITLIST?</span></h2>
+        <img src="/img/landingpage/streg.svg" alt="underline" class="underline-img" />
       </div>
-      <div class="waitlist">
-        <div class="waitlist-heading">
-          <h2>WANT TO JOIN OUR <span class="highlighted">WAITLIST?</span></h2>
-          <img src="/img/landingpage/streg.svg" alt="underline" class="underline-img" />
-        </div>
-        <p>we'd love to hear from you!</p>
-        <!-- Knappen -->
-          <LinkButton link="/signup">READ MORE</LinkButton>
-      </div>
-      </div>
+      <p>we'd love to hear from you!</p>
+      <!-- Knappen -->
+      <LinkButton link="/signup">READ MORE</LinkButton>
+    </div>
   </section>
 </MainLayout>
 
 <style>
-/* styling af videoen */
-.hero{
-  margin-top: -2rem;
-  position: relative;
-  height: 65svh;
-  overflow: hidden;
-  margin-left: -2rem;
-  margin-right: -2rem;
-  
-}
-.hero-logo h1{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  font-size: 7rem;
-  color: var(--primary);
-}
+  /* styling af videoen */
+  .hero {
+    margin-top: -2rem;
+    position: relative;
+    height: 65svh;
+    overflow: hidden;
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .hero-logo h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 7rem;
+    color: var(--primary);
+  }
 
-.lower {
-  position: relative;
-  top: 0.2em;
-}
-  
-  .hero-content{
+  .lower {
+    position: relative;
+    top: 0.2em;
+  }
+
+  .hero-content {
     position: relative;
     width: 100%;
     height: 100%;
-    
   }
 
-  .hero-content video{
+  .hero-content video {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    
   }
 
   .pilen svg {
@@ -132,246 +125,265 @@ import LinkButton from "../components/LinkButton.astro";
     width: 50px;
     height: 50px;
     z-index: 3;
-  top: 80%;
-  left: 46%;
-    }
-
-   
-
-    /* GRAFISKE FORMER */
-    .grafiske_form img,
-.grafiske_form2 img {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: auto;
-}
-
-.grafiske_form img { 
-  left: 0%; 
-}
-.grafiske_form2 img { 
-  right: 0%; 
-}
-
-
-/* STYLING FOR GALLERY SECTION */
-
-.gallery-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.galleri_text{
-  overflow: hidden;
-  margin-right: 3rem;
-  margin-bottom: 5rem;
-}
-
-.overskrift{
-  font-size: var(--h1m);
-  margin-top: 5rem;
-}
-.galleri_text p{
-  margin-left: 4rem;
-  max-width: 25ch; /*det gør at man kan bestemme hvor brede linjerne kan være */
-}
-
-.pilen2{
-  margin-top: 1rem;
-      width: 45px;
-      height: 45px;
-      margin-left: 17rem;
-    } 
-
-    .scroll-button {
-  all: unset;
-  cursor: pointer;
-  display: inline-flex; /* så SVG'en ikke forsvinder */
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery-item {
-  flex: 0 0 auto; /*grow-shrink-basis*/
-width: 80%;   /* måske skal man have width: 100%*/
-  height: auto;
-  scroll-snap-align: start;
-}
-
-/* STYLING AF HVERT BILLEDE PÅ GALLERI */
-.gallery-item img{
-  height: auto;
-  object-fit: cover;
-}
-
-/* individuelle billede-justeringer (kan justeres efter behov) */
-.gallery-item:first-child img { width: 60%; }
-.gallery-item:nth-child(2) img { width: 70%; margin-top: 5rem; }
-.gallery-item:nth-child(3) img { width: 50%; margin-top: 20rem; }
-.gallery-item:nth-child(4) img { width: 90%; }
-.gallery-item:nth-child(5) img { width: 50%; margin-top: 2rem; }
-.gallery-item:nth-child(6) img { width: 60%; margin-top: 6rem; }
-.gallery-item:last-child img { width: 70%; }
-
-
-/* STYLING AF WAITLIST SECTION */
-/* hele sektionen */
-.wait_list{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-/* kun teksten */
-.waitlist{
-  display: grid;
-  gap: 1.5rem;  /* gap mellem linjerne */
-  justify-items: baseline;
-}
-
-/* stroke under "waitlist" */
-.waitlist-heading {
-  position: relative;
-  display: inline-block;
-}
-
-.underline-img {
-  position: absolute;
-  bottom: -0.5em; 
-  left: 100%;
-  transform: translateX(-100%);
-  width: 125px; 
-  pointer-events: none;
-}
-
-.highlighted {
-  position: relative;
-  z-index: 1;
-}
-
-@media screen and (min-width: 700px) {
-  .hero{
-  margin-top: -3rem;
-}
-}
-
-/* mellem *mediaquery til hero_video */
-@media screen and (min-width: 700px) {
-  .hero{
-  margin-left: -3rem;
-  margin-right: -3rem;
-  height: 70svh;
-}
-   .hero-logo h1{
-  font-size: 10rem;
-  }
-
-  .pilen2{
-      margin-left: 22rem;
-    } 
-}
-
-  @media screen and (min-width: 800px) {
-    .hero{ 
-    height: 75svh;
-  margin-left: -3rem;
-  margin-right: -3rem;
-}
-   .hero-logo h1{
-  font-size: 15rem;
-  }
-
-  .pilen svg {
-    top: 78%;
+    top: 80%;
     left: 46%;
-    width: 100px;
-    height: 100px;
-    }
-    
-    .pilen2{
-  margin-top: 2rem;
-      width: 75px;
-      height: 75px;
-      margin-left: 23rem;
-    } 
+  }
 
-    /* STYLING FOR GALLERY SECTION */
-    .gallery {
+  /* GRAFISKE FORMER */
+  .grafiske_form img,
+  .grafiske_form2 img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+  }
+
+  .grafiske_form img {
+    left: 0%;
+  }
+  .grafiske_form2 img {
+    right: 0%;
+  }
+
+  /* STYLING FOR GALLERY SECTION */
+
+  .gallery-container {
     display: flex;
-    flex-direction: row; 
-    /* justify-content: space-between; 
-    align-items: flex-start;  */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
   }
 
   .galleri_text {
-    flex: 0 0 auto;
-    width: 60%; 
-    margin-top: 8rem;
+    overflow: hidden;
+    margin-right: 3rem;
+    margin-bottom: 5rem;
   }
 
-  .gallery-container {
-    margin-top: 10rem;
+  .overskrift {
+    font-size: var(--h1m);
+    margin-top: 5rem;
+  }
+  .galleri_text p {
+    margin-left: 4rem;
+    max-width: 25ch; /*det gør at man kan bestemme hvor brede linjerne kan være */
+  }
+
+  .pilen2 {
+    margin-top: 1rem;
+    width: 45px;
+    height: 45px;
+    margin-left: 17rem;
+  }
+
+  .scroll-button {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex; /* så SVG'en ikke forsvinder */
+    align-items: center;
+    justify-content: center;
   }
 
   .gallery-item {
-    width: 100%; 
+    flex: 0 0 auto; /*grow-shrink-basis*/
+    width: 80%; /* måske skal man have width: 100%*/
     height: auto;
+    scroll-snap-align: start;
   }
 
-.overskrift{
-  font-size: var(--h1d);
-  margin-top: 9rem;
-}
-
-.galleri_text p{
-  margin-left: 15rem;
-}
-
-/* GRAFISKE FORMER */
-.grafiske_form img{
-    width: 65%;
+  /* STYLING AF HVERT BILLEDE PÅ GALLERI */
+  .gallery-item img {
     height: auto;
+    object-fit: cover;
+  }
+
+  /* individuelle billede-justeringer (kan justeres efter behov) */
+  .gallery-item:first-child img {
+    width: 60%;
+  }
+  .gallery-item:nth-child(2) img {
+    width: 70%;
+    margin-top: 5rem;
+  }
+  .gallery-item:nth-child(3) img {
+    width: 50%;
+    margin-top: 20rem;
+  }
+  .gallery-item:nth-child(4) img {
+    width: 90%;
+  }
+  .gallery-item:nth-child(5) img {
+    width: 50%;
+    margin-top: 2rem;
+  }
+  .gallery-item:nth-child(6) img {
+    width: 60%;
+    margin-top: 6rem;
+  }
+  .gallery-item:last-child img {
+    width: 70%;
+  }
+
+  /* STYLING AF WAITLIST SECTION */
+  /* hele sektionen */
+  .wait_list {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  /* kun teksten */
+  .waitlist {
+    display: grid;
+    gap: 1.5rem; /* gap mellem linjerne */
+    justify-items: baseline;
+  }
+
+  /* stroke under "waitlist" */
+  .waitlist-heading {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-img {
+    position: absolute;
+    bottom: -0.5em;
+    left: 100%;
+    transform: translateX(-100%);
+    width: 125px;
+    pointer-events: none;
+  }
+
+  .highlighted {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 600px) {
+    .hero {
+      margin-top: -3rem;
+      margin-left: -3rem;
+      margin-right: -3rem;
+    }
+  }
+
+  /* mellem *mediaquery til hero_video */
+  @media screen and (min-width: 700px) {
+    .hero {
+      margin-right: -3rem;
+      height: 70svh;
+    }
+    .hero-logo h1 {
+      font-size: 10rem;
     }
 
-    .grafiske_form2 img{
+    .pilen2 {
+      margin-left: 22rem;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .hero {
+      height: 75svh;
+      margin-right: -3rem;
+    }
+    .hero-logo h1 {
+      font-size: 15rem;
+    }
+
+    .pilen svg {
+      top: 78%;
+      left: 46%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .pilen2 {
+      margin-top: 2rem;
+      width: 75px;
+      height: 75px;
+      margin-left: 23rem;
+    }
+
+    /* STYLING FOR GALLERY SECTION */
+    .gallery {
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-between; 
+    align-items: flex-start;  */
+    }
+
+    .galleri_text {
+      flex: 0 0 auto;
+      width: 60%;
+      margin-top: 8rem;
+    }
+
+    .gallery-container {
+      margin-top: 10rem;
+    }
+
+    .gallery-item {
+      width: 100%;
+      height: auto;
+    }
+
+    .overskrift {
+      font-size: var(--h1d);
+      margin-top: 9rem;
+    }
+
+    .galleri_text p {
+      margin-left: 15rem;
+    }
+
+    /* GRAFISKE FORMER */
+    .grafiske_form img {
+      width: 65%;
+      height: auto;
+    }
+
+    .grafiske_form2 img {
       margin-top: -10rem;
-    width: 100%;
-    height: auto;
-    }   
+      width: 100%;
+      height: auto;
+    }
 
-/* STYLING AF WAITLIST SECTION */
-/* hele sektionen */
-.wait_list{
-  margin-top: 25rem;
-  margin-bottom: 10rem;
-}
+    /* STYLING AF WAITLIST SECTION */
+    /* hele sektionen */
+    .wait_list {
+      margin-top: 17rem;
+      margin-bottom: 10rem;
+    }
 
-/* kun teksten */
-.waitlist{
-  gap: 2rem;
-}
+    /* kun teksten */
+    .waitlist {
+      gap: 2rem;
+    }
 
-/* stroke under "waitlist" */
-.underline-img {
-  width: 175px; 
-  bottom: -0.7em; 
-}
-}
+    /* stroke under "waitlist" */
+    .underline-img {
+      width: 175px;
+      bottom: -0.7em;
+    }
+  }
 
-@media screen and (min-width: 950px){
-.pilen2{
-  margin-left: 28rem;
-}
+  @media screen and (min-width: 950px) {
+    .pilen2 {
+      margin-left: 28rem;
+    }
 
-.hero{ 
-  
+    .hero {
       width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
-}
-}
+      position: relative;
+      left: calc(-50vw + 50%);
+      margin-left: -1rem;
+    }
+  }
 
+  @media screen and (min-width: 1200px) {
+    .hero {
+      margin-left: 0rem;
+    }
+  }
 </style>
 
 <script>
@@ -383,7 +395,7 @@ width: 80%;   /* måske skal man have width: 100%*/
       scrollButton.addEventListener("click", () => {
         gallery.scrollBy({
           left: 300, // antal pixels at scrolle til højre
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
     }
