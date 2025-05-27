@@ -6,9 +6,9 @@ Vi har skrevet denne readme for at sikre, en så strømlignet samarbejdsproces s
 
 - Organisering af billeder, fonte og andre ressourcer:
 
-  Billeder er placeret i en mappe kaldet 'img' i 'public' mappen
+  Billeder er placeret i en mappe kaldet 'img' i 'public' mappen, og derefter inddelt i mapper til den givende side. Videoen ligger i en mappe kaldet 'video' i 'public' mappen.
   Fonte (adobe) linkes til i <head> i mainLayout, samt defineres i css variabler (style.css)
-  Andre ressourcer ligger i en mappe kaldet 'assets' (logo, video...)
+  Andre ressourcer ligger i en mappe kaldet 'assets' (logo, favicon)
 
 - Pages, Stylesheets, Layouts og components ligger alle i respektive mapper i src.
 
@@ -39,7 +39,7 @@ Vi har skrevet denne readme for at sikre, en så strømlignet samarbejdsproces s
 
 # API endpoints
 
-Link til superbase?
+Link til superbase: https://supabase.com/dashboard/project/nlpgwdmoeqpqkoifrvrz/editor/17242
 
 # Astro Starter Kit: Minimal
 
