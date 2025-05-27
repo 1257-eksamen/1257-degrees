@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout.astro";
 import LinkButton from "../components/LinkButton.astro";
 ---
 
-<MainLayout title="Homepage">
+<MainLayout title="Homepage" metabeskrivelse="Explore the 1257° ceramics universe, where there's room for everyone and a focus on creating a cozy community in Amager.">
   <div class="hero"> 
   <div class="hero-logo">
     <h1>1<span class="lower">2</span>5<span class="lower">7</span>°</h1>
@@ -90,11 +90,13 @@ import LinkButton from "../components/LinkButton.astro";
 <style>
 /* styling af videoen */
 .hero{
+  margin-top: -2rem;
   position: relative;
   height: 65svh;
   overflow: hidden;
   margin-left: -2rem;
   margin-right: -2rem;
+  
 }
 .hero-logo h1{
   position: absolute;
@@ -115,12 +117,14 @@ import LinkButton from "../components/LinkButton.astro";
     position: relative;
     width: 100%;
     height: 100%;
+    
   }
 
   .hero-content video{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    
   }
 
   .pilen svg {
@@ -246,6 +250,12 @@ width: 80%;   /* måske skal man have width: 100%*/
   z-index: 1;
 }
 
+@media screen and (min-width: 700px) {
+  .hero{
+  margin-top: -3rem;
+}
+}
+
 /* mellem *mediaquery til hero_video */
 @media screen and (min-width: 700px) {
   .hero{
@@ -260,7 +270,6 @@ width: 80%;   /* måske skal man have width: 100%*/
   .pilen2{
       margin-left: 22rem;
     } 
-
 }
 
   @media screen and (min-width: 800px) {
@@ -353,6 +362,13 @@ width: 80%;   /* måske skal man have width: 100%*/
 @media screen and (min-width: 950px){
 .pilen2{
   margin-left: 28rem;
+}
+
+.hero{ 
+  
+      width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 }
 
